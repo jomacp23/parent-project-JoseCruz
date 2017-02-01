@@ -9,6 +9,7 @@
         <version>1.0</version>
     </parent>
 
+    <groupId>com.springservice</groupId>
     <artifactId>spring-service</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>

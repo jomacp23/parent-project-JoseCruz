@@ -9,6 +9,7 @@
         <version>1.0</version>
     </parent>
 
+    <groupId>com.springwebmvc</groupId>
     <artifactId>spring-webMVC</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
