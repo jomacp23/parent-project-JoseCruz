@@ -18,12 +18,57 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        
+
+        <!-- data-model layer -->
+        <dependency>
+            <groupId>com.datamodel</groupId>
+            <artifactId>data-model</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!--  Hibernate y conexion de la DB -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+        </dependency>
+
+        <!-- Driver de Base de Datos -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.29</version>
+        </dependency>
+
+        <!--  Spring Data JPA -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.11.0.RELEASE</version>
+        </dependency>
+
+        <!--  Librería para el pool de conexiones -->
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>0.8.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <!--  Test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        
+
     </dependencies>
     
 </project>
