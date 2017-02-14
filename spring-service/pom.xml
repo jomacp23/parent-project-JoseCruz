@@ -18,6 +18,19 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
+
+        <!-- spring-data layer -->
+        <dependency>
+            <groupId>com.springdata</groupId>
+            <artifactId>spring-data</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!--  Test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
         
         <dependency>
             <groupId>junit</groupId>
