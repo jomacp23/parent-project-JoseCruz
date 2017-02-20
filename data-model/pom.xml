@@ -11,7 +11,6 @@
 
     <groupId>com.datamodel</groupId>
     <artifactId>data-model</artifactId>
-    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>data-model</name>

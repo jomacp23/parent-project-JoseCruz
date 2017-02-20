@@ -18,6 +18,17 @@
         <module>spring-webMVC</module>
     </modules>
     
+    <properties>
+    
+    	<jdk.version>1.8</jdk.version>
+    	
+    	<junit_version>4.12</junit_version>
+    	
+    	<!-- Web dependencies -->
+		<spring_version>4.3.4.RELEASE</spring_version>
+    	
+    </properties>
+    
     <dependencyManagement>
         
         <dependencies>
@@ -25,8 +36,16 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>4.3.5.RELEASE</version>
+                <version>${spring_version}</version>
             </dependency>
+            
+            <!-- Spring Dependencies -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring_version}</version>
+				<scope>compile</scope>
+			</dependency>
 
             <dependency>
                 <groupId>org.hibernate</groupId>
@@ -38,7 +57,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>${junit_version}</version>
                 <scope>test</scope>
             </dependency>
 
@@ -46,7 +65,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>4.0.5.RELEASE</version>
+                <version>${spring_version}</version>
                 <scope>test</scope>
             </dependency>
             
