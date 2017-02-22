@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<h2>Hello World!</h2>
-</body>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+  		<title>Spring MVC</title>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	</head>
+	<body>
+		<div th:replace="fragments/header :: header"></div>
+		<br>
+	    <div class="container">
+	    	<div class="hero-unit">
+	        	<p>
+	        		Bienvenido a la libreria de Spring MVC.
+	        	</p>
+	       	</div>
+	      	<div th:replace="fragments/footer :: footer"></div>
+	    </div>
+    </body>
 </html>

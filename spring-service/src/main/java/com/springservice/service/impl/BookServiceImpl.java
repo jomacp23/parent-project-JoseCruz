@@ -21,4 +21,13 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findByTitle(title);
     }
 
+	public List<Book> findAll() {
+		return bookRepository.findAll();
+	}
+
+	public Book AddBook(Book book) {
+		Book bookAdded = bookRepository.saveAndFlush(book);
+		return bookAdded;
+	}
+
 }

@@ -22,8 +22,7 @@
         <dependency>
             <groupId>com.datamodel</groupId>
             <artifactId>data-model</artifactId>
-            <version>1.0</version>
-        </dependency>
+            </dependency>
 
         <!--  Hibernate y conexion de la DB -->
         <dependency>

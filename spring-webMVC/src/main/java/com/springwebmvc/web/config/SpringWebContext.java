@@ -82,7 +82,7 @@ public class SpringWebContext extends WebMvcConfigurerAdapter implements Applica
 	    viewResolver.setCharacterEncoding("UTF-8");	
 	    return viewResolver;
 	}
-
+	
 	@Override
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		this.applicationContext = applicationContext;		
