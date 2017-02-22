@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+ 	<head>
+ 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ 	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
+			<div class="container">
+				<div class="navbar-header">
+					<h1 th:text="#{msg.title.aplicacion}"/>
+				</div>
+				<div>
+    				<table>
+        				<tr>
+        					<td><a href="#" th:href="@{/darDeAlta}">Dar de alta</a></td>
+        					<td><a href="#" th:href="@{/actualizar}">Actualizar</a></td>
+        					<td><a href="#" th:href="@{/buscar}">Buscar</a></td>
+        					<td><a href="#" th:href="@{/eliminar}">Eliminar</a></td>
+        				</tr>
+    				</table>
+	    		</div>
+			</div>
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+  		<title>Spring MVC</title>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	</head>
+	<body>
+		<div th:replace="fragments/header :: header"></div>
+	    <div class="container">
+	    	<form action="#" th:action="@{/darDeAltaLibro}" th:object="${book}" method="post">
+    			<table>
+        			<tr>
+            			<td align="right"><label th:text="#{msg.label.isbn}" /></td>
+            			<td><input type="text" th:field="*{isbn}" /></td>
+        			</tr>
+        			<tr>
+            			<td align="right"><label th:text="#{msg.label.title}" /></td>
+            			<td><input type="text" th:field="*{title}" /></td>
+        			</tr>
+        			<tr>
+            			<td align="right"><label th:text="#{msg.label.dateOfPublication}" /></td>
+            			<td><input type="date" th:field="*{dateOfPublication}" /></td>
+        			</tr>
+        			<tr>
+        				<td/>
+            			<td align="right"><input type="submit" value="Agregar" /></td>
+        			</tr>
+    			</table>
+			</form>
+			<p>
+				<label th:if="${#bookAdded == false}" th:inline="text" th:text="#{msg.label.addBook.error}" />
+				<label th:if="${#bookAdded == true}" th:inline="text" th:text="#{msg.label.addBook.correcto}" />
+			</p>
+	    </div>
+	    <div th:replace="fragments/footer :: footer"></div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+  		<title>Spring MVC</title>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	</head>
+	<body>
+		<div th:replace="fragments/header :: header"></div>
+		<div class="container">
+	    	<form action="#" th:action="@{/buscarPorTitulo}" th:object="${book}" method="post">
+    			<table>
+        			<tr>
+	            		<td><label th:text="#{msg.label.title}" /></td>
+	            		<td><input type="text" th:field="*{title}" /></td>
+	            		<td><input type="submit" value="Buscar" /></td>
+        			</tr>
+    			</table>
+			</form>
+	    </div>
+		<div class="bookList">
+			<h4 th:text="#{msg.title.section.search}"/>
+			<table border="1">
+				<thead>
+			    	<tr>
+				        <th th:text="#{msg.label.isbn}"/>
+				        <th th:text="#{msg.label.title}"/>
+				        <th th:text="#{msg.label.dateOfPublication}"/>
+			    	</tr>
+			    </thead>
+			    <tbody>
+			    	<tr th:each="book : ${books}">
+			    		<td th:text="${book.isbn}"/>
+			    		<td th:text="${book.title}"/>
+				        <td th:text="${book.dateOfPublication}"/>
+			    	</tr>
+				</tbody>
+			</table>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+    </body>
+</html>
